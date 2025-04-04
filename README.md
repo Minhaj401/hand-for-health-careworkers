@@ -13,7 +13,7 @@ A simple Flask web application that allows users to create comments and replies.
 
 1. Clone this repository:
 ```bash
-git clone [your-repository-url]
+git clone https://github.com/Minhaj401/hand-for-health-careworkers
 cd flaskapp
 ```
 
