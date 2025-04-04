@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand to Health Care Workers</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Hand to Health Care Workers</h1>
+    </header>
+    
+    <form action="/comment" method="post">
+        <textarea name="content" required placeholder="Write a discussion..."></textarea>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="comments">
+        <h2>Discussion</h2>
+        {% for comment in comments %}
+            <div class="comment">
+                <p>{{ comment[1] }}</p>
+                <form action="/reply/{{ comment[0] }}" method="post">
+                    <textarea name="content" required placeholder="Reply..."></textarea>
+                    <button type="submit">Reply</button>
+                </form>
+                <div class="replies">
+                    {% for reply in reply_dict.get(comment[0], []) %}
+                        <div class="reply">
+                            <p>{{ reply[1] }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <footer>
+        <p>For enquiries and suggestions, contact us at: <a href="mailto:minhajnoushad123@gmail.com">minhajnoushad123@gmail.com</a></p>
+    </footer>
+</body>
+</html>

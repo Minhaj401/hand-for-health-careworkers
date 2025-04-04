@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    background-image: url('../static/background.jpg'); /* Adjust path to your image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Ensure it's behind other content */
+    opacity: 0.7; /* 70% opacity */
+}
+
+header {
+    background-color: rgba(0, 91, 94, 0.8); /* Header color with slight transparency */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+h1 {
+    margin: 0;
+}
+
+form {
+    margin: 20px 0;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+button {
+    background-color: #003640; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005b5e; /* Lighter hover effect */
+}
+
+.comments {
+    margin-top: 30px;
+}
+
+.comment, .reply {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Limit the width of the comment boxes */
+    margin-left: auto; /* Center the comment boxes */
+    margin-right: auto; /* Center the comment boxes */
+}
+
+.comment p, .reply p {
+    margin: 0 0 10px;
+}
+
+.replies {
+    margin-left: 20px; /* Indent replies */
+}
+
+.reply {
+    background-color: #f9f9f9; /* Slightly different background for replies */
+}
+
+h2 {
+    text-align: center; /* Center the discussion heading */
+    color: #003640; /* Discussion heading color */
+    margin: 40px auto; /* Center and add vertical space */
+    max-width: 600px; /* Limit width to keep it neat */
+}
+
+footer {
+    background-color: rgba(0, 91, 94, 0.8); /* Footer color with slight transparency */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px; /* Space above footer */
+}
+
+footer a {
+    color: #5cb85c; /* Link color */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
